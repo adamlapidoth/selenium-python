@@ -1,9 +1,11 @@
 from selenium import webdriver
 
-#chrome driver
+# chrome driver
 from selenium.webdriver.chrome.service import Service
-#-- Chrome
+
+# -- Chrome
 from selenium.webdriver.common.by import By
+
 name = "Rahul"
 service_obj = Service("/Users/rahulshetty/documents/chromedriver")
 driver = webdriver.Chrome(service=service_obj)
@@ -16,9 +18,4 @@ alertText = alert.text
 print(alertText)
 assert name in alertText
 alert.accept()
-#alert.dismiss()
-
-
-
-
-
+# alert.dismiss()

@@ -1,20 +1,19 @@
 from selenium import webdriver
 
-#chrome driver
+# chrome driver
 from selenium.webdriver.chrome.service import Service
-#-- Chrome
+
+# -- Chrome
 service_obj = Service("/Users/rahulshetty/documents/chromedriver")
 driver = webdriver.Chrome(service=service_obj)
 
-#-- Firefox
+# -- Firefox
 # service_obj = Service("/Users/rahulshetty/documents/geckodriver")
 # driver = webdriver.Firefox(service=service_obj)
 
-#-- Edge
+# -- Edge
 # service_obj = Service("/Users/rahulshetty/documents/msedgedriver")
 # driver = webdriver.Edge(service=service_obj)
-
-
 
 
 driver.maximize_window()
