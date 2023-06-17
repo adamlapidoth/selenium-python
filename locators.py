@@ -11,3 +11,11 @@ driver.get("https://rahulshettyacademy.com/angularpractice/")
 driver.find_element(By.NAME, "email").send_keys("hello@example.com")
 driver.find_element(By.ID, "exampleInputPassword1").send_keys("123456")
 driver.find_element(By.ID, "exampleCheck1").click()
+
+# CSS - tagname[attribute='value'] -? input[type='submit']
+driver.find_element(By.CSS_SELECTOR, "input[name='name']").send_keys("Adam")
+# Xpath - //tagname[@attribute='value'] -? //input[@type='submit']
+driver.find_element(By.XPATH, "//input[@type='submit']").click()
+msg = driver.find_element(By.CLASS_NAME, "alert-success").text
+print(msg)
+assert "Success" in msg
